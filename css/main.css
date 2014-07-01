@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  min-width: 1500px;
   font-family: "Segoe UI", "Myriad Pro", Helvetica, "Lucida Sans Unicode", sans-serif, Futura, Tahoma;
 }
 
@@ -30,7 +31,7 @@ body {
   display: block;
   height: 530px;
   text-align: center;
-  padding: 80px;
+  padding: 80px 0 80px 0;
   background-color: #ffffff;
 }
 
@@ -57,7 +58,7 @@ body {
   display: block;
   height: 840px;
   text-align: center;
-  padding: 80px;
+  padding: 80px 0 80px 0;
   background-color: #231F20;
 }
 
@@ -208,7 +209,7 @@ body {
   display: block;
   height: 565px;
   text-align: center;
-  padding: 80px;
+  padding: 80px 0 80px 0;
   background-color: #ffffff;
 }
 
@@ -270,7 +271,7 @@ body {
   height: 40px;
   min-width: 600px;
   text-align: center;
-  padding: 25px;
+  padding: 25px 0 25px 0;
   background-color: #231F20;
   transition: background-color .5s;
 }
@@ -290,7 +291,7 @@ body {
   display: block;
   height: 60px;
   text-align: center;
-  padding: 55.5px;
+  padding: 55.5px 0 55.5px 0;
   background: url('../img/footer-batik.jpg');
 }
 
