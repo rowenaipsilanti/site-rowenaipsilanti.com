@@ -1,0 +1,470 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Myriad Pro", Helvetica, "Lucida Sans Unicode", sans-serif, Futura, Tahoma;
+}
+
+/**************************************************
+ * Home
+ **************************************************/
+#page-home {
+  display: block;
+  height: 1000px;
+  text-align: center;
+  background: url('../img/cover.png') no-repeat;
+  background-size: 1920px 1000px;
+}
+
+/**************************************************
+ * About
+ **************************************************/
+#filling-about {
+  display: inline-block;
+  position: absolute;
+  top: 700px;
+  height: 990px;
+  width: 100%;
+  visibility: hidden;
+}
+
+#page-about {
+  display: block;
+  height: 530px;
+  text-align: center;
+  padding: 80px;
+  background-color: #ffffff;
+}
+
+#text-about {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 500px;
+  top: -20px;
+}
+
+#text-about p {
+  font-size: 0.9em;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  text-align: justify;
+  color: #000000;
+}
+
+/**************************************************
+ * Arch
+ **************************************************/
+#page-arch {
+  display: block;
+  height: 840px;
+  text-align: center;
+  padding: 80px;
+  background-color: #231F20;
+}
+
+#project-table {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 0;
+  height: 560px;
+  width: 1500px;
+}
+
+#project-occupy-a-pool {
+  left: 0;
+  height: 560px;
+  width: 480px;
+  background: url('../img/architecture/occupy-a-pool/thumbnail.jpg');
+}
+
+#project-pcp-mall-extension {
+  left: 480px;
+  height: 200px;
+  width: 300px;
+  background: url('../img/architecture/pcp-mall-extension/thumbnail.jpg');
+}
+
+#project-nexus {
+  top: 200px;
+  left: 480px;
+  height: 360px;
+  width: 300px;
+  background: url('../img/architecture/nexus/thumbnail.jpg');
+}
+
+#project-parahyangan-residences {
+  left: 780px;
+  height: 560px;
+  width: 360px;
+  background: url('../img/architecture/parahyangan-residences/thumbnail.jpg');
+}
+
+#project-redo-glass-house {
+  left: 1140px;
+  height: 320px;
+  width: 360px;
+  background: url('../img/architecture/redo-glass-house/thumbnail.jpg');
+}
+
+#project-event-balloon {
+  top: 320px;
+  left: 1140px;
+  height: 240px;
+  width: 360px;
+  background: url('../img/architecture/event-balloon/thumbnail.jpg');
+}
+
+.project-trait {
+  display: inline-block;
+  position: absolute;
+  opacity: 0.3;
+  transition: opacity .5s;
+}
+
+.project-name {
+  display: inline-block;
+  position: absolute;
+  text-align: left;
+  left: 15px;
+  bottom: 10px;
+  font-size: 1.5em;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  visibility: hidden;
+  transition: visibility .1s;
+}
+
+#project-occupy-a-pool:hover,
+#project-pcp-mall-extension:hover,
+#project-nexus:hover,
+#project-parahyangan-residences:hover,
+#project-redo-glass-house:hover,
+#project-event-balloon:hover {
+  opacity: 1;
+}
+
+#project-occupy-a-pool:hover .project-name,
+#project-pcp-mall-extension:hover .project-name,
+#project-nexus:hover .project-name,
+#project-parahyangan-residences:hover .project-name,
+#project-redo-glass-house:hover .project-name,
+#project-event-balloon:hover .project-name {
+  visibility: visible;
+}
+
+/**************************************************
+ * Arch-Showcase (Popout)
+ **************************************************/
+.showcase-popout,
+.showcase-image,
+.showcase-title,
+.showcase-desc {
+  display: none; /* inline-block; */
+  left: 0;
+  text-align: center;
+}
+
+.showcase-popout {
+  position: absolute;
+  top: 1870px;
+  height: 640px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.showcase-image {
+  position: relative;
+  left: -100px;
+  height: 450px;
+}
+
+.showcase-title,
+.showcase-desc {
+  position: relative;
+  width: 500px;
+  color: #000000;
+}
+
+.showcase-title {
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 0;
+  font-size: 1.8em;
+}
+
+.showcase-desc {
+  top: 10px;
+  height: 80px;
+  font-size: .7em;
+  text-align: justify;
+}
+
+/**************************************************
+ * Music
+ **************************************************/
+#page-music {
+  display: block;
+  height: 565px;
+  text-align: center;
+  padding: 80px;
+  background-color: #ffffff;
+}
+
+#music-box {
+  display: inline-block;
+  position: relative;
+  margin: 70px 0 100px 0;
+  text-align: center;
+  padding: 0;
+  height: 250px;
+  width: 500px;
+}
+
+#music-box1,
+#music-box2 {
+  position: absolute;
+  height: 210px;
+  width: 250px;
+  padding-top: 40px;
+  font-size: 3em;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 1s;
+}
+
+#music-box1 {
+  background: url('../img/music/youtube.jpg');
+  left: 0;
+}
+
+#music-box2 {
+  background: url('../img/music/facebook.jpg');
+  left: 250px;
+}
+
+
+.music-click {
+  visibility: hidden;
+}
+
+#music-box1:hover {
+  background: #e12a27;
+}
+
+#music-box2:hover {
+  background: #3b5998;
+}
+
+#music-box1:hover .music-click,
+#music-box2:hover .music-click {
+  visibility: visible;
+}
+
+/**************************************************
+ * Contact
+ **************************************************/
+#page-contact {
+  display: block;
+  height: 40px;
+  min-width: 600px;
+  text-align: center;
+  padding: 25px;
+  background-color: #231F20;
+  transition: background-color .5s;
+}
+
+#page-contact:hover {
+  background-color: #000000;
+}
+
+.mailink {
+  text-decoration: none;
+}
+
+/**************************************************
+ * Footer
+ **************************************************/
+#footer {
+  display: block;
+  height: 60px;
+  text-align: center;
+  padding: 55.5px;
+  background: url('../img/footer-batik.jpg');
+}
+
+/**************************************************
+ * Logo
+ **************************************************/
+#logo {
+  display:inline-block;
+  position: relative;
+  top: 440px;
+}
+
+.logo-small {
+  position: relative;
+  top: -20px;
+}
+
+/**************************************************
+ * Text
+ **************************************************/
+.text-white,
+.text-brown,
+.text-black {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 500px;
+  top: -20px;
+  font-size: 0.9em;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-brown {
+  color: #e7d4b4;
+}
+
+.text-black {
+  color: #000000;
+}
+
+/**************************************************
+ * Social Icons
+ **************************************************/
+#social-icons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  transition: background .4s;
+}
+
+#fb {
+  background: url('../img/share/facebook.png');
+}
+
+#linkedin {
+  background: url('../img/share/linkedin.png');
+  margin-left: 20px;
+}
+
+#twitter {
+  background: url('../img/share/twitter.png');
+  margin-left: 20px;
+}
+
+#fb:hover {
+  background-image: url('../img/share/facebook-hover.png');
+}
+
+#linkedin:hover {
+  background-image: url('../img/share/linkedin-hover.png');
+}
+
+#twitter:hover {
+  background-image: url('../img/share/twitter-hover.png');
+}
+
+/**************************************************
+ * Back Home Button
+ **************************************************/
+.back-home-white,
+.back-home-black {
+  margin: auto;
+  display: inline-block;
+  height: 25px;
+  width: 140px;
+  padding-top: 3px;
+  text-decoration: none;
+  transition: background-color .5s, color .5s;
+}
+
+.back-home-white {
+  border: 1px solid #999999;
+  color: #999999;
+}
+
+.back-home-black {
+  border: 1px solid #141213;
+  color: #000000;
+}
+
+.back-home-white:hover {
+  background-color: #999999;
+  color: #ffffff;
+}
+
+.back-home-black:hover {
+  background-color: #141213;
+  color: #ffffff;
+}
+
+/**************************************************
+ * Navbar
+ **************************************************/
+#navbar {
+  position: fixed;
+  text-align: center;
+  bottom: 20px;
+  left: 0px;
+  padding-top: 7px;
+  background: rgba(0, 0, 0, 0.4);
+  height: 30px;
+  width: 100%;
+}
+
+#navbar ul {
+  display: inline-block;
+  width: 960px;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li {
+  display: inline-block;
+  width: 24%;
+}
+
+#navbar ul li a {
+  font-size: 1em;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color .5s;
+}
+
+#navbar ul li a:hover {
+  color: #decf61;
+}
+
+/**************************************************
+ * Bottom Elements
+ **************************************************/
+#down-arrow img {
+  position: fixed;
+  left: 49.5%;
+  bottom: 5px;
+  padding-left: 0;
+  opacity: 0.6;
+}
+
+#copyright-box {
+  height: 30px;
+  width: 250px;
+  padding-top: 5px;
+  background: rgba(0, 0, 0, 0.4);
+}
