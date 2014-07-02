@@ -11,8 +11,8 @@ body {
   display: block;
   height: 1000px;
   text-align: center;
-  background: url('../img/cover.png') no-repeat;
-  background-size: 1920px 1000px;
+  background: url('../img/cover.png');
+  background-size: cover;
 }
 
 /**************************************************
