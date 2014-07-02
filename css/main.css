@@ -1,7 +1,7 @@
 body {
   margin: 0;
   min-width: 1500px;
-  font-family: "Segoe UI", "Myriad Pro", Helvetica, "Lucida Sans Unicode", sans-serif, Futura, Tahoma;
+  font-family: "Noto Sans", "Segoe UI", "Myriad Pro", "Helvetica", "Arial", sans-serif;
 }
 
 /**************************************************
@@ -44,7 +44,7 @@ body {
 }
 
 #text-about p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   letter-spacing: 0.3px;
   line-height: 20px;
   text-align: justify;
@@ -130,7 +130,7 @@ body {
   text-align: left;
   left: 15px;
   bottom: 10px;
-  font-size: 1.5em;
+  font-size: 1.4em;
   letter-spacing: 0.3px;
   color: #ffffff;
   visibility: hidden;
@@ -191,7 +191,6 @@ body.modal-open {
   top: 1870px;
   height: 640px;
   width: 100%;
-  background-color: #ffffff;
 }
 
 .showcase-image {
@@ -205,14 +204,14 @@ body.modal-open {
   display: inline-block;
   position: relative;
   width: 500px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .showcase-title {
   height: 50px;
   padding-top: 15px;
   padding-bottom: 0;
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
 .showcase-desc {
@@ -252,7 +251,7 @@ body.modal-open {
   font-size: 3em;
   color: #ffffff;
   text-decoration: none;
-  transition: background 1s;
+  transition: background .5s;
 }
 
 #music-box1 {
@@ -325,6 +324,7 @@ body.modal-open {
 }
 
 .logo-small {
+  display: inline-block;
   position: relative;
   top: -20px;
 }
@@ -340,7 +340,7 @@ body.modal-open {
   text-align: center;
   width: 500px;
   top: -20px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   letter-spacing: 0.3px;
   line-height: 20px;
 }
