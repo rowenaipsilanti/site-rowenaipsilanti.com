@@ -7,7 +7,7 @@ body {
 /**************************************************
  * Home
  **************************************************/
-#page-home {
+#home {
   display: block;
   height: 1000px;
   text-align: center;
@@ -18,7 +18,7 @@ body {
 /**************************************************
  * About
  **************************************************/
-#filling-about {
+#about {
   display: inline-block;
   position: absolute;
   top: 700px;
@@ -27,7 +27,7 @@ body {
   visibility: hidden;
 }
 
-#page-about {
+#about-content {
   display: block;
   height: 530px;
   text-align: center;
@@ -54,7 +54,7 @@ body {
 /**************************************************
  * Arch
  **************************************************/
-#page-arch {
+#architecture {
   display: block;
   height: 840px;
   text-align: center;
@@ -159,71 +159,79 @@ body {
  * Arch-Showcase (Popout)
  **************************************************/
 
-#blank-screen {
+#showcase {
+  /* For the blank screen */
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
-  background-color: #231F20;
+  background-color: rgba(35, 31, 32, .8);
+
+  /* For the content */
+  text-align: center;
+  padding-top : 100px;
 }
 
+/* Disable scrolling while on showcase popout */
 body.modal-open {
   overflow: hidden;
 }
 
-.showcase-popout {
-  display: none;
+/* Image navigation line */
+#showcase-prev,
+#showcase-next,
+#showcase-image {
+  vertical-align: middle;
 }
 
-.showcase-popout,
-.showcase-image,
-.showcase-title,
-.showcase-desc {
-  text-align: center;
-}
-
-.showcase-popout {
-  position: absolute;
-  top: 1870px;
-  height: 640px;
-  width: 100%;
-}
-
-.showcase-image {
+#showcase-prev,
+#showcase-next {
   display: inline-block;
-  position: relative;
-  height: 450px;
+  margin: 20px;
+  height: 35px;
+  width: 10px;
 }
 
-.showcase-title,
-.showcase-desc {
+#showcase-prev {
+  background: url('../img/arrow-left.png') no-repeat;
+}
+
+#showcase-next {
+  background: url('../img/arrow-right.png') no-repeat;
+}
+
+/* Showcase text properties */
+#showcase-image,
+#showcase-title,
+#showcase-desc {
   display: inline-block;
-  position: relative;
-  width: 500px;
+  width: 700px;
   color: #ffffff;
+  padding-bottom: 15px;
 }
 
-.showcase-title {
-  height: 50px;
-  padding-top: 15px;
-  padding-bottom: 0;
+#showcase-title {
   font-size: 1.7em;
 }
 
-.showcase-desc {
-  top: 10px;
-  height: 80px;
+#showcase-desc {
   font-size: .7em;
   text-align: justify;
+}
+
+/* Hide the text for anchor tag with text, alternative to 'alt' */
+.hide-text {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
 }
 
 /**************************************************
  * Music
  **************************************************/
-#page-music {
+#music {
   display: block;
   height: 565px;
   text-align: center;
@@ -284,7 +292,7 @@ body.modal-open {
 /**************************************************
  * Contact
  **************************************************/
-#page-contact {
+#contact {
   display: block;
   height: 40px;
   min-width: 600px;
@@ -294,7 +302,7 @@ body.modal-open {
   transition: background-color .5s;
 }
 
-#page-contact:hover {
+#contact:hover {
   background-color: #000000;
 }
 
@@ -319,7 +327,7 @@ body.modal-open {
 #logo {
   display: inline-block;
   position: relative;
-  top: 270px;
+  top: 300px;
 }
 
 .logo-small {

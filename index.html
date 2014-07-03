@@ -32,17 +32,17 @@
       <a class="circle" id="twitter" href="https://twitter.com/nyaNyiRoro" target="_blank"></a>
     </div>
 
-    <div id="page-home">
+    <div id="home">
       <div id="logo">
         <img src="./img/simple-logo.png" alt="Rowena Ipsilanti"/><br />
         <img src="./img/logo.png" alt="Rowena Ipsilanti"/>
       </div>
     </div>
 
-    <div id="filling-about">
+    <div id="about">
     </div>
 
-    <div id="page-about">
+    <div id="about-content">
       <div class="logo-small">
         <img src="./img/logo-small.png" alt="Rowena Ipsilanti"/>
       </div>
@@ -53,10 +53,10 @@
         <p>Rowena has been working on numerous design projects, specializing in commercial and high-rise buildings, and is passionate about exploring the role of architecture in the changing modern world, which demands technology advancement, social media utilization, personal business and public economic growth, culture and etiquette refinement of society.</p>
       </div>
       <br />
-      <a class="back-home-white" href="#page-home">Go Back Home</a>
+      <a class="back-home-white" href="#home">Go Back Home</a>
     </div>
 
-    <div id="page-arch">
+    <div id="architecture">
       <div class="logo-small">
         <img src="./img/logo-small.png" alt="Rowena Ipsilanti"/>
       </div>
@@ -66,18 +66,30 @@
       </div>
       <br />
       <div id="project-table">
-        <div data-ri-name="occupy-a-pool" id="project-occupy-a-pool" class="project-trait"><div class="project-name">Occupy A Pool</div></div>
-        <div id="project-pcp-mall-extension" class="project-trait"><div class="project-name">PCP Mall Extension</div></div>
-        <div id="project-nexus" class="project-trait"><div class="project-name">Nexus</div></div>
-        <div id="project-parahyangan-residences" class="project-trait"><div class="project-name">Parahyangan Residences</div></div>
-        <div id="project-redo-glass-house" class="project-trait"><div class="project-name">Redo Glass House</div></div>
-        <div id="project-event-balloon" class="project-trait"><div class="project-name">Event Balloon</div></div>
+        <a href="#architecture" data-ri-projectId="occupy-a-pool" id="project-occupy-a-pool" class="project-trait">
+          <div class="project-name">Occupy A Pool</div>
+        </a>
+        <a href="#architecture" data-ri-projectId="pcp-mall-extension" id="project-pcp-mall-extension" class="project-trait">
+          <div class="project-name">PCP Mall Extension</div>
+        </a>
+        <a href="#architecture" data-ri-projectId="nexus" id="project-nexus" class="project-trait">
+          <div class="project-name">Nexus</div>
+        </a>
+        <a href="#architecture" data-ri-projectId="parahyangan-residences" id="project-parahyangan-residences" class="project-trait">
+          <div class="project-name">Parahyangan Residences</div>
+        </a>
+        <a href="#architecture" data-ri-projectId="redo-glass-house" id="project-redo-glass-house" class="project-trait">
+          <div class="project-name">Redo Glass House</div>
+        </a>
+        <a href="#architecture" data-ri-projectId="event-balloon" id="project-event-balloon" class="project-trait">
+          <div class="project-name">Event Balloon</div>
+        </a>
       </div>
       <br />
-      <a class="back-home-black" href="#page-home">Go Back Home</a>
+      <a class="back-home-black" href="#home">Go Back Home</a>
     </div>
 
-    <div id="page-music">
+    <div id="music">
       <div class="logo-small">
        <img src="./img/logo-small.png" alt="Rowena Ipsilanti"/>
       </div>
@@ -93,11 +105,11 @@
           <p class="music-click">Like</p></a>
       </div>
       <br />
-      <a class="back-home-white" href="#page-home">Go Back Home</a>
+      <a class="back-home-white" href="#home">Go Back Home</a>
     </div>
 
     <a class="mailink" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hello@rowenaipsilanti.com" target="_blank">
-    <div id="page-contact">
+    <div id="contact">
       <img src="./img/share/email.png" alt="Send email"/>
     </div>
     </a>
@@ -108,10 +120,10 @@
 
     <div id="navbar">
       <ul>
-        <li><a href="#filling-about">About</a></li>
-        <li><a href="#page-arch">Architecture</a></li>
-        <li><a href="#page-music">Music</a></li>
-        <li><a href="#page-contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
@@ -119,16 +131,18 @@
       <img src="./img/down-arrow.png" alt="Scroll down"/>
     </div>
 
-    <div id="blank-screen"></div>
-    <div id="showcase-occupy-a-pool" class="showcase-popout">
-      <div class="showcase-title">Occupy A Pool</div>
+    <div id="showcase" data-ri-numOfImages="0">
+      <div id="showcase-title">Occupy A Pool</div>
       <br />
-      <div class="showcase-image">
-        <img src="./img/architecture/occupy-a-pool/1.jpg" alt="Occupy A Pool"/>
-      </div>
+
+      <a id="showcase-prev" class="hide-text" href="javascript:void(0)">Previous image</a>
+      <img id="showcase-image" src="./img/architecture/occupy-a-pool/1.jpg" alt="Occupy A Pool"/>
+      <a id="showcase-next" class="hide-text" href="javascript:void(0)">Next image</a>
       <br />
-      <div class="showcase-desc"><strong>This project is about re-programming an interior test site that is paired with a modeling technique</strong> focusing the design efforts through a particular approach to material and spatial concerns, leaving room for individual translation and invention. The site is an olympic pool and the space is re-programmed to accommodate performances. The pool is flipped vertically and floating above the emptied original pool, which now functions as a performance space. The wall of the new pool is made of <strong>a cast of rockite</strong> and the water is represented by <strong>casted soap</strong> which allows light to penetrate through.</div>
+
+      <div id="showcase-desc"><strong>This project is about re-programming an interior test site that is paired with a modeling technique</strong> focusing the design efforts through a particular approach to material and spatial concerns, leaving room for individual translation and invention. The site is an olympic pool and the space is re-programmed to accommodate performances. The pool is flipped vertically and floating above the emptied original pool, which now functions as a performance space. The wall of the new pool is made of <strong>a cast of rockite</strong> and the water is represented by <strong>casted soap</strong> which allows light to penetrate through.</div>
     </div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
