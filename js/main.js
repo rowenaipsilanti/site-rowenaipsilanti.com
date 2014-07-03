@@ -32,11 +32,11 @@ $(document).ready(function() {
     }
   };
 
-  var SHOWCASE_FADE_TIMEOUT = 500
-    , SHOWCASE_DEFAULT_IMAGE_IDX = 1
-    , DATA_KEY_PROJECT_ID = 'data-ri-projectId'
-    , DATA_KEY_NUM_OF_IMGS = 'data-ri-numOfImages'
-    , DATA_KEY_CURR_IMG_IDX = 'data-ri-currentImageIndex';
+  var SHOWCASE_FADE_TIMEOUT = 500,
+      SHOWCASE_DEFAULT_IMAGE_IDX = 1,
+      DATA_KEY_PROJECT_ID = 'data-ri-projectId',
+      DATA_KEY_NUM_OF_IMGS = 'data-ri-numOfImages',
+      DATA_KEY_CURR_IMG_IDX = 'data-ri-currentImageIndex';
 
   var showcaseClose = function() {
     $('#showcase').fadeOut(SHOWCASE_FADE_TIMEOUT);
@@ -105,6 +105,7 @@ $(document).ready(function() {
         case 39: // Right Arrow
           $('#showcase-next').click();
           break;
+        default: break;
       }
     }
   });
@@ -114,12 +115,13 @@ $(document).ready(function() {
     event.stopPropagation();
 
     // Get attributes from #showcase
-    var projectId = $('#showcase').attr(DATA_KEY_PROJECT_ID)
-      , numOfImages = $('#showcase').attr(DATA_KEY_NUM_OF_IMGS)
-      , currentImageIndex = $('#showcase').attr(DATA_KEY_CURR_IMG_IDX);
+    var projectId = $('#showcase').attr(DATA_KEY_PROJECT_ID),
+        numOfImages = $('#showcase').attr(DATA_KEY_NUM_OF_IMGS),
+        currentImageIndex = $('#showcase').attr(DATA_KEY_CURR_IMG_IDX);
 
     // Change the image if necessary
-    if (++currentImageIndex <= numOfImages) {
+    currentImageIndex++;
+    if (currentImageIndex <= numOfImages) {
       showcaseChangeImage(projectId, currentImageIndex);
     } else {
       // Rollover? Get the first image
@@ -132,12 +134,13 @@ $(document).ready(function() {
     event.stopPropagation();
 
     // Get attributes from #showcase
-    var projectId = $('#showcase').attr(DATA_KEY_PROJECT_ID)
-      , numOfImages = $('#showcase').attr(DATA_KEY_NUM_OF_IMGS)
-      , currentImageIndex = $('#showcase').attr(DATA_KEY_CURR_IMG_IDX);
+    var projectId = $('#showcase').attr(DATA_KEY_PROJECT_ID),
+        numOfImages = $('#showcase').attr(DATA_KEY_NUM_OF_IMGS),
+        currentImageIndex = $('#showcase').attr(DATA_KEY_CURR_IMG_IDX);
 
     // Change the image if necessary
-    if (--currentImageIndex >= 1) {
+    currentImageIndex--;
+    if (currentImageIndex >= 1) {
       showcaseChangeImage(projectId, currentImageIndex);
     } else {
       // Rollover? Get the last image
