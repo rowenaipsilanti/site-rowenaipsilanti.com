@@ -182,7 +182,6 @@ body.modal-open {
 .showcase-image,
 .showcase-title,
 .showcase-desc {
-  left: 0;
   text-align: center;
 }
 
@@ -318,9 +317,9 @@ body.modal-open {
  * Logo
  **************************************************/
 #logo {
-  display:inline-block;
+  display: inline-block;
   position: relative;
-  top: 440px;
+  top: 300px;
 }
 
 .logo-small {
