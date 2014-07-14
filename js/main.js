@@ -3,7 +3,7 @@ $(document).ready(function() {
     'occupy-a-pool': {
       'numOfImages': 3,
       'title': 'Occupy A Pool',
-      'desc': '<strong>This project is about re-programming an interior test site that is paired with a modeling technique</strong> focusing the design efforts through a particular approach to material and spatial concerns, leaving room for individual translation and invention. The site is an olympic pool and the space is re-programmed to accommodate performances. The pool is flipped vertically and floating above the emptied original pool, which now functions as a performance space. The wall of the new pool is made of <strong>a cast of rockite</strong> and the water is represented by <strong>casted soap</strong> which allows light to penetrate through.'
+      'desc': 'This project is about re-programming an interior test site that is paired with a modeling technique focusing the design efforts through a particular approach to material and spatial concerns, leaving room for individual translation and invention. The site is an olympic pool and the space is re-programmed to accommodate performances. The pool is flipped vertically and floating above the emptied original pool, which now functions as a performance space. The wall of the new pool is made of a cast of rockite and the water is represented by casted soap which allows light to penetrate through.'
     },
     'pcp-mall-extension': {
       'numOfImages': 9,
@@ -13,17 +13,17 @@ $(document).ready(function() {
     'nexus': {
       'numOfImages': 11,
       'title': 'Nexus',
-      'desc': 'Situated between major urban spaces, the NEXUS acts as a link between Chicago and Toronto, New Center and Detroit and within the site.  It utilizes the transit hub as the center and nexus between the regions as a catalyst and stem for people to connect with each other.<br />The NEXUS is designed for pedestrian friendly walkways and transportation centers for commuters, residents and visitors. Reacting to the existing site conditions, the NEXUS creates a flow within the block for pedestrians and cyclists.  Through a meandering central axis, the architecture curves to suggest a flow around the site and the spaces in and around buildings.  The street side is perforated with entrances that welcome pedestrians into the spaces within.'
+      'desc': 'Situated between major urban spaces, the NEXUS acts as a link between Chicago and Toronto, New Center and Detroit and within the site.  It utilizes the transit hub as the center and nexus between the regions as a catalyst and stem for people to connect with each other. The NEXUS is designed for pedestrian friendly walkways and transportation centers for commuters, residents and visitors. Reacting to the existing site conditions, the NEXUS creates a flow within the block for pedestrians and cyclists.  Through a meandering central axis, the architecture curves to suggest a flow around the site and the spaces in and around buildings.  The street side is perforated with entrances that welcome pedestrians into the spaces within.'
     },
     'parahyangan-residences': {
-      'numOfImages': 4,
+      'numOfImages': 8,
       'title': 'Parahyangan Residences',
-      'desc': 'In this project, I designed an apartment together with my team intended mainly for, but not restricted to students. Strategically located near two known public institutions/universities, the apartment is designed to be simple and modern. It has two towers and features vast natural and man-made green environments to promote its function as a living and study space for a diverse range of students. The front tower is more exclusive and upclass. Facilities include infinite and lagoon pools, with pool side cafe and cafetaria facing the valley at the back of the structures, gym, courts, and shops to accommodate the needs of its users.<br /><br />(published on www.parahyanganresidences.com)'
+      'desc': 'In this project, I designed an apartment together with my team intended mainly for, but not restricted to students. Strategically located near two known public institutions/universities, the apartment is designed to be simple and modern. It has two towers and features vast natural and man-made green environments to promote its function as a living and study space for a diverse range of students. The front tower is more exclusive and upclass. Facilities include infinite and lagoon pools, with pool side cafe and cafetaria facing the valley at the back of the structures, gym, courts, and shops to accommodate the needs of its users. (published on www.parahyanganresidences.com)'
     },
     'redo-glass-house': {
-      'numOfImages': 4,
+      'numOfImages': 13,
       'title': 'Redo Glass House',
-      'desc': 'Building up my deep interest in the “Layering of Views” in the precedent Glass House by Philip Johnson through my series of analysis of the house, this project is a total adoption of and a new design built upon the past.<br />My analysis of light and layering of views in the Glass House was being taken further into designing a new architecture that incorporates both the ideas of light, reflection and transparencies of glass to create a layering of spaces.<br />This project has an objective to rearrange previous conceptions in the service of originating new ones.'
+      'desc': 'Building up my deep interest in the “Layering of Views” in the precedent Glass House by Philip Johnson through my series of analysis of the house, this project is a total adoption of and a new design built upon the past. My analysis of light and layering of views in the Glass House was being taken further into designing a new architecture that incorporates both the ideas of light, reflection and transparencies of glass to create a layering of spaces. This project has an objective to rearrange previous conceptions in the service of originating new ones.'
     },
     'event-balloon': {
       'numOfImages': 13,
