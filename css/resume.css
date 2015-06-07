@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Rowena Sansumi";
+  src: url(sansumi-bold.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Lucida Grande",Tahoma,Verdana,Arial,Sans-Serif;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+div#resume-container {
+  margin: 10px auto;
+  width: 800px;
+}
+
+#headline {
+  text-align: right;
+}
+
+#resume-name {
+  font-family: "Rowena Sansumi","Lucida Grande",Tahoma,Verdana,Arial,Sans-Serif;
+  letter-spacing: .2em;
+  margin-bottom: .2em;
+}
+
+.first-name {
+  color: #957723;
+}
+
+.last-name {
+  color: #DCC631;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr.resume-section {
+  border-bottom: 20px solid #FFF;
+}
+
+td.section-title {
+  font-family: "Rowena Sansumi","Lucida Grande",Tahoma,Verdana,Arial,Sans-Serif;
+  font-weight: 700;
+  color: #957723;
+}
+
+td {
+  vertical-align: top;
+}
+
+td.section-title {
+  padding-right: 10px;
+  border-right: 1pt solid #DCC631;
+}
+
+td.section-description {
+  padding-left: 10px;
+}
+
+td.column-two-split {
+  padding-right: 20px;
+  width: 40%;
+}
+
+div.promo-soft-copy {
+  padding-top: 2px;
+  text-align: center;
+  font-weight: 700;
+}
+
+a.bold {
+  color: #957723;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a.bold:hover {
+  text-decoration: underline;
+}
+
+a.non-bold {
+  color: #957723;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a.non-bold:hover {
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
