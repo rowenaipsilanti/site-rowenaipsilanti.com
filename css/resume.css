@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Lucida Grande",Tahoma,Verdana,Arial,Sans-Serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 12px;
   line-height: 1.5em;
 }
@@ -21,7 +21,7 @@ div#resume-container {
 }
 
 #resume-name {
-  font-family: "Rowena Sansumi","Lucida Grande",Tahoma,Verdana,Arial,Sans-Serif;
+  font-family: "Rowena Sansumi","Lucida Sans Unicode", "Lucida Grande", sans-serif;
   letter-spacing: .2em;
   margin-bottom: .2em;
 }
@@ -44,7 +44,7 @@ tr.resume-section {
 }
 
 td.section-title {
-  font-family: "Rowena Sansumi","Lucida Grande",Tahoma,Verdana,Arial,Sans-Serif;
+  font-family: "Rowena Sansumi","Lucida Grande","Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: 700;
   color: #957723;
 }
