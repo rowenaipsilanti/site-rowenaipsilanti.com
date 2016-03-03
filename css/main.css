@@ -6,10 +6,11 @@ body {
 }
 
 #home,
-#design-works background {
+#design-works {
   z-index: -1;
 }
 
+#social-icons,
 #navbar,
 #down-arrow img{
   position: fixed;
@@ -418,7 +419,6 @@ body.modal-open {
  * Social Icons
  **************************************************/
 #social-icons {
-  position: fixed;
   top: 20px;
   right: 20px;
 }
