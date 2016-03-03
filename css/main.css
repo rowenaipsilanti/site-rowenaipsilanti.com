@@ -1,15 +1,28 @@
 body {
   margin: 0;
   min-width: 1500px;
-  font-family: "Noto Sans", "Segoe UI", "Myriad Pro", "Helvetica", "Arial", sans-serif;
+  font-family: 'Lato', "Segoe UI", "Myriad Pro", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+#home,
+#design-works background {
+  z-index: -1;
+}
+
+#navbar,
+#down-arrow img{
+  position: fixed;
+  z-index: 0;
 }
 
 /**************************************************
  * Home
  **************************************************/
 #home {
+  position: relative;
   display: block;
-  height: 1000px;
+  height: 980px;
   text-align: center;
   background: url('../img/cover.png');
   background-size: cover;
@@ -21,7 +34,7 @@ body {
 #about {
   display: inline-block;
   position: absolute;
-  top: 700px;
+  top: 900px;
   height: 990px;
   width: 100%;
   visibility: hidden;
@@ -32,7 +45,6 @@ body {
   height: 530px;
   text-align: center;
   padding: 80px 0 80px 0;
-  background-color: #ffffff;
 }
 
 #text-about {
@@ -54,7 +66,8 @@ body {
 /**************************************************
  * Arch
  **************************************************/
-#architecture {
+#design-works {
+  position: relative;
   display: block;
   height: 840px;
   text-align: center;
@@ -66,7 +79,6 @@ body {
   display: inline-block;
   position: relative;
   text-align: center;
-  margin-top: 40px;
   margin-bottom: 60px;
   padding: 0;
   height: 560px;
@@ -167,7 +179,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(35, 31, 32, .8);
+  background-color: rgba(35, 31, 32, .9);
 
   /* For the content */
   text-align: center;
@@ -191,7 +203,7 @@ body.modal-open {
   display: inline-block;
   margin: 20px;
   height: 35px;
-  width: 10px;
+  width: 18px;
 }
 
 #showcase-prev {
@@ -200,6 +212,11 @@ body.modal-open {
 
 #showcase-next {
   background: url('../img/arrow-right.png') no-repeat;
+}
+
+#showcase-prev:hover,
+#showcase-next:hover {
+  opacity: .7;
 }
 
 /* Showcase text properties */
@@ -217,7 +234,7 @@ body.modal-open {
 }
 
 #showcase-desc {
-  font-size: .7em;
+  font-size: .8em;
   text-align: justify;
 }
 
@@ -232,6 +249,7 @@ body.modal-open {
  * Music
  **************************************************/
 #music {
+  position: relative;
   display: block;
   height: 565px;
   text-align: center;
@@ -294,31 +312,24 @@ body.modal-open {
  **************************************************/
 #contact {
   display: block;
-  height: 40px;
+  height: 200px;
   min-width: 600px;
   text-align: center;
-  padding: 25px 0 25px 0;
-  background-color: #231F20;
+  padding: 300px 0 200px 0;
   transition: background-color .5s;
-}
-
-#contact:hover {
-  background-color: #000000;
-}
-
-.mailink {
-  text-decoration: none;
 }
 
 /**************************************************
  * Footer
  **************************************************/
 #footer {
+  position: relative;
   display: block;
-  height: 60px;
+  height: 30px;
   text-align: center;
-  padding: 55.5px 0 55.5px 0;
+  padding: 40px 0 20px 0;
   background: url('../img/footer-batik.jpg');
+  z-index: 1;
 }
 
 /**************************************************
@@ -327,7 +338,8 @@ body.modal-open {
 #logo {
   display: inline-block;
   position: relative;
-  top: 300px;
+  top: 320px;
+  left: -10px;
 }
 
 .logo-small {
@@ -341,15 +353,24 @@ body.modal-open {
  **************************************************/
 .text-white,
 .text-brown,
-.text-black {
+.text-black,
+.text-gray,
+.footer-text-white {
   display: inline-block;
   position: relative;
   text-align: center;
   width: 500px;
   top: -20px;
-  font-size: 0.8em;
   letter-spacing: 0.3px;
   line-height: 20px;
+}
+
+.text-white,
+.text-brown,
+.text-black,
+.text-gray {
+  font-size: 0.9em;
+  font-weight: 500;
 }
 
 .text-white {
@@ -364,6 +385,35 @@ body.modal-open {
   color: #000000;
 }
 
+.text-gray {
+  color: #999999;
+}
+
+.contact-text-gray,
+.mail-text-gray {
+  color: #999999;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.contact-text-gray {
+  font-size: 0.9em;
+}
+
+.mail-text-gray,
+.mail-text-gray:hover {
+  font-weight: 700;
+}
+
+.mail-text-gray:hover {
+  color: #000000;
+}
+
+.footer-text-white {
+  color: rgba(255, 255, 255, 0.8);;
+  font-size: 0.6em;
+}
+
 /**************************************************
  * Social Icons
  **************************************************/
@@ -375,36 +425,45 @@ body.modal-open {
 
 .circle {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  opacity: 0.5;
+  width: 35px;
+  height: 35px;
+  opacity: 0.8;
   transition: background .4s;
 }
 
 #fb {
-  background: url('../img/share/facebook.png');
+  background: url('../img/share/facebook.svg');
 }
 
 #linkedin {
-  background: url('../img/share/linkedin.png');
-  margin-left: 20px;
+  background: url('../img/share/linkedin.svg');
+  margin-left: 10px;
 }
 
 #twitter {
-  background: url('../img/share/twitter.png');
-  margin-left: 20px;
+  background: url('../img/share/twitter.svg');
+  margin-left: 10px;
+}
+
+#youtube {
+  background: url('../img/share/youtube.svg');
+  margin-left: 10px;
 }
 
 #fb:hover {
-  background-image: url('../img/share/facebook-hover.png');
+  background-image: url('../img/share/facebook-hover.svg');
 }
 
 #linkedin:hover {
-  background-image: url('../img/share/linkedin-hover.png');
+  background-image: url('../img/share/linkedin-hover.svg');
 }
 
 #twitter:hover {
-  background-image: url('../img/share/twitter-hover.png');
+  background-image: url('../img/share/twitter-hover.svg');
+}
+
+#youtube:hover {
+  background-image: url('../img/share/youtube-hover.svg');
 }
 
 /**************************************************
@@ -416,28 +475,33 @@ body.modal-open {
   display: inline-block;
   height: 25px;
   width: 140px;
-  padding-top: 3px;
+  padding-top: 8px;
   text-decoration: none;
+  font-size: .7em;
+  font-weight: 700;
+  letter-spacing: .7px;
   transition: background-color .5s, color .5s;
 }
 
 .back-home-white {
-  border: 1px solid #999999;
+  border: 0.2px solid rgba(0, 0, 0, 0.1);
   color: #999999;
 }
 
 .back-home-black {
-  border: 1px solid #141213;
-  color: #000000;
+  border: 0.2px solid #999999;
+  color: #999999;
 }
 
 .back-home-white:hover {
-  background-color: #999999;
-  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: #231F20;
 }
 
 .back-home-black:hover {
-  background-color: #141213;
+  border: 1px solid #231F20;
+  background-color: #231F20;
   color: #ffffff;
 }
 
@@ -445,12 +509,11 @@ body.modal-open {
  * Navbar
  **************************************************/
 #navbar {
-  position: fixed;
   text-align: center;
-  bottom: 20px;
+  bottom: 30px;
   left: 0px;
   padding-top: 7px;
-  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   height: 30px;
   width: 100%;
 }
@@ -468,31 +531,31 @@ body.modal-open {
 }
 
 #navbar ul li a {
-  font-size: 1em;
+  font-size: .8em;
+  font-weight: 700;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #999999;
   text-decoration: none;
   transition: color .5s;
 }
 
 #navbar ul li a:hover {
-  color: #decf61;
+  color: #000000;
 }
 
 /**************************************************
  * Bottom Elements
  **************************************************/
 #down-arrow img {
-  position: fixed;
   left: 49.5%;
-  bottom: 5px;
+  bottom: 0px;
   padding-left: 0;
-  opacity: 0.6;
 }
 
 #copyright-box {
   height: 30px;
-  width: 250px;
+  width: 350px;
   padding-top: 5px;
-  background: rgba(0, 0, 0, 0.4);
+  /*border: 1px solid rgba(255, 255, 255, 0.5);;
+  /*background: rgba(0, 0, 0, 0.4);
 }
