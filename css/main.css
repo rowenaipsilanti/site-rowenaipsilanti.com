@@ -27,7 +27,7 @@ body {
   display: block;
   height: 980px;
   text-align: center;
-  background: url('../img/cover.jpg') no-repeat center center fixed;
+  background: url('../img/cover.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
