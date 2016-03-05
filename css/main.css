@@ -5,12 +5,14 @@ body {
   font-weight: 300;
 }
 
+/**************************************************
+ * Z-index Setup
+ **************************************************/
 #home,
-#design-works {
+#design-works background{
   z-index: -1;
 }
 
-#social-icons,
 #navbar,
 #down-arrow img{
   position: fixed;
@@ -25,7 +27,10 @@ body {
   display: block;
   height: 980px;
   text-align: center;
-  background: url('../img/cover.png');
+  background: url('../img/cover') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -35,7 +40,7 @@ body {
 #about {
   display: inline-block;
   position: absolute;
-  top: 900px;
+  top: 1000px;
   height: 990px;
   width: 100%;
   visibility: hidden;
@@ -43,9 +48,9 @@ body {
 
 #about-content {
   display: block;
-  height: 530px;
+  height: 750px;
   text-align: center;
-  padding: 80px 0 80px 0;
+  padding: 200px 0 130px 0;
 }
 
 #text-about {
@@ -72,7 +77,7 @@ body {
   display: block;
   height: 840px;
   text-align: center;
-  padding: 80px 0 80px 0;
+  padding: 40px 0 40px 0;
   background-color: #231F20;
 }
 
@@ -339,7 +344,7 @@ body.modal-open {
 #logo {
   display: inline-block;
   position: relative;
-  top: 320px;
+  top: 60px;
   left: -10px;
 }
 
@@ -352,8 +357,6 @@ body.modal-open {
 /**************************************************
  * Text
  **************************************************/
-.text-white,
-.text-brown,
 .text-black,
 .text-gray,
 .footer-text-white {
@@ -366,33 +369,31 @@ body.modal-open {
   line-height: 20px;
 }
 
-.text-white,
-.text-brown,
 .text-black,
 .text-gray {
   font-size: 0.9em;
   font-weight: 500;
 }
 
-.text-white {
-  color: #ffffff;
-}
-
-.text-brown {
-  color: #e7d4b4;
-}
-
-.text-black {
+.text-black,
+.text-large,
+.mail-text-gray:hover {
   color: #000000;
 }
 
-.text-gray {
+.text-gray,
+.contact-text-gray,
+.mail-text-gray {
   color: #999999;
+}
+
+.text-large {
+  margin-top: 30px;
+  font-size: 2.2em;
 }
 
 .contact-text-gray,
 .mail-text-gray {
-  color: #999999;
   text-decoration: none;
   letter-spacing: 0.3px;
 }
@@ -406,10 +407,6 @@ body.modal-open {
   font-weight: 700;
 }
 
-.mail-text-gray:hover {
-  color: #000000;
-}
-
 .footer-text-white {
   color: rgba(255, 255, 255, 0.8);;
   font-size: 0.6em;
@@ -419,8 +416,10 @@ body.modal-open {
  * Social Icons
  **************************************************/
 #social-icons {
+  position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 2;
 }
 
 .circle {
@@ -513,7 +512,7 @@ body.modal-open {
   bottom: 30px;
   left: 0px;
   padding-top: 7px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
   height: 30px;
   width: 100%;
 }
