@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  min-width: 1500px;
-  font-family: 'Lato', "Segoe UI", "Myriad Pro", "Helvetica", "Arial", sans-serif;
+  min-width: 100%;
+  font-family: "Lato", "Segoe UI", "Myriad Pro", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
 }
 
 /**************************************************
  * Z-index Setup
  **************************************************/
-#home,
+
 #design-works background{
   z-index: -1;
 }
@@ -23,34 +23,44 @@ body {
  * Home
  **************************************************/
 #home {
+  /* Relative to itself, no change, but children can set their position */
   position: relative;
-  display: block;
-  height: 980px;
-  text-align: center;
-  background: url('../img/cover.jpg') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  height: 900px;
+}
+
+#hero-image {
+  background: url('../img/cover.jpg') no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
+
+  /* Should not be affected by the previous element under the same parent */
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+/**************************************************
+ * Logo
+ **************************************************/
+#logo {
+  /* Absolute against the ancestor */
+  position: relative;
+  top: 60px; right: 0; left: 0;
+  text-align: center;
+}
+
+.logo-small {
+  display: inline-block;
+  position: relative;
 }
 
 /**************************************************
  * About
  **************************************************/
 #about {
-  display: inline-block;
-  position: absolute;
-  top: 1000px;
-  height: 990px;
-  width: 100%;
-  visibility: hidden;
-}
-
-#about-content {
   display: block;
-  height: 750px;
+  height: 500px;
   text-align: center;
-  padding: 200px 0 130px 0;
+  padding: 130px 0 140px 0;
 }
 
 #text-about {
@@ -75,78 +85,84 @@ body {
 #design-works {
   position: relative;
   display: block;
-  height: 840px;
+  height: 800px;
   text-align: center;
   padding: 40px 0 40px 0;
   background-color: #231F20;
 }
 
 #project-table {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  margin-bottom: 60px;
+  display: block;
+  margin-bottom: 50px;
   padding: 0;
   height: 560px;
-  width: 1500px;
+  width: 100%;
+}
+
+#column-1,
+#column-2,
+#column-3,
+#column-4 {
+  float: left;
+  text-align: left;
+  height: 100%;
+}
+
+#column-1 {
+  width: 32%;
+}
+
+#column-2 {
+  width: 20%;
+}
+
+#column-3,
+#column-4 {
+  width: 24%;
 }
 
 #project-occupy-a-pool {
-  left: 0;
-  height: 560px;
-  width: 480px;
+  height: 100%;
   background: url('../img/architecture/occupy-a-pool/thumbnail.jpg');
 }
 
 #project-pcp-mall-extension {
-  left: 480px;
-  height: 200px;
-  width: 300px;
+  height: 35.71428571428571%;
   background: url('../img/architecture/pcp-mall-extension/thumbnail.jpg');
 }
 
 #project-nexus {
-  top: 200px;
-  left: 480px;
-  height: 360px;
-  width: 300px;
+  height: 64.28571428571429%;
   background: url('../img/architecture/nexus/thumbnail.jpg');
 }
 
 #project-parahyangan-residences {
-  left: 780px;
-  height: 560px;
-  width: 360px;
+  height: 100%;
   background: url('../img/architecture/parahyangan-residences/thumbnail.jpg');
 }
 
 #project-redo-glass-house {
-  left: 1140px;
-  height: 320px;
-  width: 360px;
+  height: 57.14285714285714%;
   background: url('../img/architecture/redo-glass-house/thumbnail.jpg');
 }
 
 #project-event-balloon {
-  top: 320px;
-  left: 1140px;
-  height: 240px;
-  width: 360px;
+  height: 42.85714285714286%;
   background: url('../img/architecture/event-balloon/thumbnail.jpg');
 }
 
 .project-trait {
-  display: inline-block;
-  position: absolute;
+  position: relative;
+  display: block;
+  width: 100%;
   opacity: 0.3;
   transition: opacity .5s;
+  text-decoration: none;
 }
 
 .project-name {
-  display: inline-block;
   position: absolute;
-  text-align: left;
-  left: 15px;
+  left: 10px;
   bottom: 10px;
   font-size: 1.4em;
   letter-spacing: 0.3px;
@@ -155,21 +171,12 @@ body {
   transition: visibility .1s;
 }
 
-#project-occupy-a-pool:hover,
-#project-pcp-mall-extension:hover,
-#project-nexus:hover,
-#project-parahyangan-residences:hover,
-#project-redo-glass-house:hover,
-#project-event-balloon:hover {
+.project-trait:hover {
   opacity: 1;
+  text-decoration: none;
 }
 
-#project-occupy-a-pool:hover .project-name,
-#project-pcp-mall-extension:hover .project-name,
-#project-nexus:hover .project-name,
-#project-parahyangan-residences:hover .project-name,
-#project-redo-glass-house:hover .project-name,
-#project-event-balloon:hover .project-name {
+.project-trait:hover .project-name {
   visibility: visible;
 }
 
@@ -336,22 +343,6 @@ body.modal-open {
   padding: 40px 0 20px 0;
   background: url('../img/footer-batik.jpg');
   z-index: 1;
-}
-
-/**************************************************
- * Logo
- **************************************************/
-#logo {
-  display: inline-block;
-  position: relative;
-  top: 60px;
-  left: -10px;
-}
-
-.logo-small {
-  display: inline-block;
-  position: relative;
-  top: -20px;
 }
 
 /**************************************************
