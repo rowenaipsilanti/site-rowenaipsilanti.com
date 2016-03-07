@@ -2,21 +2,53 @@ body {
   margin: 0;
   min-width: 100%;
   font-family: "Lato", "Segoe UI", "Myriad Pro", "Helvetica", "Arial", sans-serif;
+}
+
+p, a {
+  letter-spacing: 0.3px;
+  color: #999;
+  font-size: .9em;
+  line-height: 1.3em;
   font-weight: 300;
 }
 
-/**************************************************
- * Z-index Setup
- **************************************************/
-
-#design-works background{
-  z-index: -1;
+a {
+  text-decoration: none;
+  font-weight: 700;
 }
 
-#navbar,
-#down-arrow img{
-  position: fixed;
-  z-index: 0;
+a:hover {
+  color: #000;
+}
+
+/**************************************************
+ * Text
+ **************************************************/
+
+p.text-white {
+ color: #FFF;
+}
+
+p.text-black {
+  color: #000;
+}
+
+p.text-small {
+  font-size: .6em;
+}
+
+p.text-larger {
+  font-size: 1.4em;
+}
+
+p.text-largest {
+  font-size: 2.2em;
+}
+
+.text-button {
+  font-size: .8em;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /**************************************************
@@ -44,59 +76,43 @@ body {
 #logo {
   /* Absolute against the ancestor */
   position: relative;
-  top: 60px; right: 0; left: 0;
+  top: 60px;
   text-align: center;
-}
-
-.logo-small {
-  display: inline-block;
-  position: relative;
 }
 
 /**************************************************
  * About
  **************************************************/
 #about {
-  display: block;
   height: 500px;
   text-align: center;
   padding: 130px 0 140px 0;
 }
 
 #text-about {
-  display: inline-block;
-  position: relative;
-  text-align: center;
+  /* Implicitly width: 100% from the parent, but want to create a container */
   width: 500px;
-  top: -20px;
+  /* This container has to be aligned center, without being an inline-block */
+  margin: 0 auto;
 }
 
 #text-about p {
-  font-size: 0.8em;
-  letter-spacing: 0.3px;
-  line-height: 20px;
   text-align: justify;
-  color: #000000;
 }
 
 /**************************************************
  * Arch
  **************************************************/
 #design-works {
-  position: relative;
-  display: block;
   height: 800px;
   text-align: center;
-  padding: 40px 0 40px 0;
+  padding: 20px 0 40px 0;
   background-color: #231F20;
 }
 
 #project-table {
-  display: block;
   margin-bottom: 50px;
-  padding: 0;
   height: 560px;
-  width: 100%;
 }
 
 #column-1,
@@ -104,7 +120,6 @@ body {
 #column-3,
 #column-4 {
   float: left;
-  text-align: left;
   height: 100%;
 }
 
@@ -152,28 +167,26 @@ body {
 }
 
 .project-trait {
+  /* Position relative so .project-name (child) can depend on this element */
   position: relative;
+  /* Set to treat the <a> as a block/div, thus can hold background, etc. */
   display: block;
-  width: 100%;
+
   opacity: 0.3;
   transition: opacity .5s;
-  text-decoration: none;
 }
 
 .project-name {
   position: absolute;
   left: 10px;
-  bottom: 10px;
-  font-size: 1.4em;
-  letter-spacing: 0.3px;
-  color: #ffffff;
+  bottom: 0;
+
   visibility: hidden;
   transition: visibility .1s;
 }
 
 .project-trait:hover {
   opacity: 1;
-  text-decoration: none;
 }
 
 .project-trait:hover .project-name {
@@ -196,7 +209,7 @@ body {
 
   /* For the content */
   text-align: center;
-  padding-top : 100px;
+  padding-top : 50px;
 }
 
 /* Disable scrolling while on showcase popout */
@@ -238,16 +251,10 @@ body.modal-open {
 #showcase-desc {
   display: inline-block;
   width: 700px;
-  color: #ffffff;
   padding-bottom: 15px;
 }
 
-#showcase-title {
-  font-size: 1.7em;
-}
-
 #showcase-desc {
-  font-size: .8em;
   text-align: justify;
 }
 
@@ -259,74 +266,10 @@ body.modal-open {
 }
 
 /**************************************************
- * Music
- **************************************************/
-#music {
-  position: relative;
-  display: block;
-  height: 565px;
-  text-align: center;
-  padding: 80px 0 80px 0;
-  background-color: #ffffff;
-}
-
-#music-box {
-  display: inline-block;
-  position: relative;
-  margin: 70px 0 100px 0;
-  text-align: center;
-  padding: 0;
-  height: 250px;
-  width: 500px;
-}
-
-#music-box1,
-#music-box2 {
-  position: absolute;
-  height: 210px;
-  width: 250px;
-  padding-top: 40px;
-  font-size: 3em;
-  color: #ffffff;
-  text-decoration: none;
-  transition: background .5s;
-}
-
-#music-box1 {
-  background: url('../img/music/youtube.jpg');
-  left: 0;
-}
-
-#music-box2 {
-  background: url('../img/music/facebook.jpg');
-  left: 250px;
-}
-
-
-.music-click {
-  visibility: hidden;
-}
-
-#music-box1:hover {
-  background: #e12a27;
-}
-
-#music-box2:hover {
-  background: #3b5998;
-}
-
-#music-box1:hover .music-click,
-#music-box2:hover .music-click {
-  visibility: visible;
-}
-
-/**************************************************
  * Contact
  **************************************************/
 #contact {
-  display: block;
   height: 200px;
-  min-width: 600px;
   text-align: center;
   padding: 300px 0 200px 0;
   transition: background-color .5s;
@@ -336,71 +279,16 @@ body.modal-open {
  * Footer
  **************************************************/
 #footer {
+  /* Adding relative position to control the z-index to hide nav bar */
   position: relative;
-  display: block;
-  height: 30px;
-  text-align: center;
-  padding: 40px 0 20px 0;
-  background: url('../img/footer-batik.jpg');
   z-index: 1;
-}
 
-/**************************************************
- * Text
- **************************************************/
-.text-black,
-.text-gray,
-.footer-text-white {
-  display: inline-block;
-  position: relative;
+  /* Specific to the block */
+  padding: 20px 0 20px 0;
+  background: url('../img/footer-batik.jpg');
+
+  /* Specific to the content inside it */
   text-align: center;
-  width: 500px;
-  top: -20px;
-  letter-spacing: 0.3px;
-  line-height: 20px;
-}
-
-.text-black,
-.text-gray {
-  font-size: 0.9em;
-  font-weight: 500;
-}
-
-.text-black,
-.text-large,
-.mail-text-gray:hover {
-  color: #000000;
-}
-
-.text-gray,
-.contact-text-gray,
-.mail-text-gray {
-  color: #999999;
-}
-
-.text-large {
-  margin-top: 30px;
-  font-size: 2.2em;
-}
-
-.contact-text-gray,
-.mail-text-gray {
-  text-decoration: none;
-  letter-spacing: 0.3px;
-}
-
-.contact-text-gray {
-  font-size: 0.9em;
-}
-
-.mail-text-gray,
-.mail-text-gray:hover {
-  font-weight: 700;
-}
-
-.footer-text-white {
-  color: rgba(255, 255, 255, 0.8);;
-  font-size: 0.6em;
 }
 
 /**************************************************
@@ -410,7 +298,7 @@ body.modal-open {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .circle {
@@ -466,7 +354,6 @@ body.modal-open {
   height: 25px;
   width: 140px;
   padding-top: 8px;
-  text-decoration: none;
   font-size: .7em;
   font-weight: 700;
   letter-spacing: .7px;
@@ -475,77 +362,43 @@ body.modal-open {
 
 .back-home-white {
   border: 0.2px solid rgba(0, 0, 0, 0.1);
-  color: #999999;
 }
 
 .back-home-black {
-  border: 0.2px solid #999999;
-  color: #999999;
+  border: 0.2px solid #999;
 }
 
 .back-home-white:hover {
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  color: #231F20;
+  border: 0.2px solid rgba(0, 0, 0, 0);
+  color: #000;
 }
 
 .back-home-black:hover {
-  border: 1px solid #231F20;
-  background-color: #231F20;
-  color: #ffffff;
+  border: 0.2px solid rgba(0, 0, 0, 0);
+  color: #FFF;
 }
 
 /**************************************************
  * Navbar
  **************************************************/
 #navbar {
+  position: fixed;
   text-align: center;
-  bottom: 30px;
-  left: 0px;
-  padding-top: 7px;
-  /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
-  height: 30px;
+  bottom: 0;
   width: 100%;
 }
 
 #navbar ul {
-  display: inline-block;
-  width: 960px;
-  margin: 0;
+  /* By default, <ul> has some padding for the bullet symbol */
   padding: 0;
 }
 
 #navbar ul li {
+  /* We want the <li> (list item) to list horizontally */
   display: inline-block;
   width: 24%;
 }
 
 #navbar ul li a {
-  font-size: .8em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #999999;
-  text-decoration: none;
   transition: color .5s;
-}
-
-#navbar ul li a:hover {
-  color: #000000;
-}
-
-/**************************************************
- * Bottom Elements
- **************************************************/
-#down-arrow img {
-  left: 49.5%;
-  bottom: 0px;
-  padding-left: 0;
-}
-
-#copyright-box {
-  height: 30px;
-  width: 350px;
-  padding-top: 5px;
-  /*border: 1px solid rgba(255, 255, 255, 0.5);;
-  /*background: rgba(0, 0, 0, 0.4);
 }
