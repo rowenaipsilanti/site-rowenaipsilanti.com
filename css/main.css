@@ -62,6 +62,9 @@ p.text-largest {
 
 #hero-image {
   background: url('../img/cover.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
 
@@ -69,6 +72,13 @@ p.text-largest {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
 }
+
+/*@media only screen and (max-device-width: 489px) {
+  #hero-image {
+    width: 300px;
+    height: 250px;
+  }
+}*/
 
 /**************************************************
  * Logo
@@ -84,16 +94,34 @@ p.text-largest {
  * About
  **************************************************/
 #about {
-  height: 500px;
+  min-height: 500px;
   text-align: center;
   padding: 130px 0 140px 0;
 }
 
+#about img,
+#design-works img {
+  width: 40%;
+}
+
+@media only screen and (max-device-width: 489px) {
+  #about img,
+  #design-works img {
+    width: 80%;
+  }
+}
+
 #text-about {
   /* Implicitly width: 100% from the parent, but want to create a container */
-  width: 500px;
+  width: 40%;
   /* This container has to be aligned center, without being an inline-block */
   margin: 0 auto;
+}
+
+@media only screen and (max-device-width: 489px) {
+  #text-about {
+    width: 80%;
+  }
 }
 
 #text-about p {
@@ -250,7 +278,7 @@ body.modal-open {
 #showcase-title,
 #showcase-desc {
   display: inline-block;
-  width: 700px;
+  width: 50%;
   padding-bottom: 15px;
 }
 
