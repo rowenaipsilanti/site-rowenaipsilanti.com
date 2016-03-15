@@ -164,34 +164,46 @@ p.text-largest {
   width: 24%;
 }
 
-#project-occupy-a-pool {
-  height: 100%;
-  background: url('../img/architecture/occupy-a-pool/thumbnail.jpg');
+#project-interactive-data-publics {
+  height: 71.42857142857143%;
+  background: url('../img/architecture/interactive-data-publics/thumbnail.jpg');
+  background-size: cover;
 }
 
-#project-pcp-mall-extension {
-  height: 35.71428571428571%;
-  background: url('../img/architecture/pcp-mall-extension/thumbnail.jpg');
-}
-
-#project-nexus {
-  height: 64.28571428571429%;
-  background: url('../img/architecture/nexus/thumbnail.jpg');
-}
-
-#project-parahyangan-residences {
-  height: 100%;
-  background: url('../img/architecture/parahyangan-residences/thumbnail.jpg');
+#project-professional-projects {
+  height: 28.57142857142857%;
+  background: url('../img/architecture/professional-projects/thumbnail.jpg');
+  background-size: cover;
 }
 
 #project-redo-glass-house {
-  height: 57.14285714285714%;
+  height: 35.71428571428571%;
   background: url('../img/architecture/redo-glass-house/thumbnail.jpg');
+  background-size: cover;
+}
+
+#project-the-road-to-sustainable-world-jakarta {
+  height: 64.28571428571429%;
+  background: url('../img/architecture/the-road-to-sustainable-world-jakarta/thumbnail.jpg');
+  background-size: cover;
+}
+
+#project-activate-the-fringes {
+  height: 100%;
+  background: url('../img/architecture/activate-the-fringes/thumbnail.jpg');
+  background-size: cover;
+}
+
+#project-nexus {
+  height: 57.14285714285714%;
+  background: url('../img/architecture/nexus/thumbnail.jpg');
+  background-size: cover;
 }
 
 #project-event-balloon {
   height: 42.85714285714286%;
   background: url('../img/architecture/event-balloon/thumbnail.jpg');
+  background-size: cover;
 }
 
 .project-trait {
@@ -237,7 +249,7 @@ p.text-largest {
 
   /* For the content */
   text-align: center;
-  padding-top : 50px;
+  padding-top : 30px;
 }
 
 /* Disable scrolling while on showcase popout */
