@@ -166,3 +166,28 @@ $(document).ready(function() {
     }
   });
 });
+
+$('.filter-button').on('click', function() {
+  // Remove class "active" from all .filter-button
+  $('.filter-button').filter(function() {
+    return $(this).hasClass('active')
+  }).removeClass('active');
+
+  // Add class "active" to $(this)
+  $(this).addClass('active');
+
+  // Show all hidden .project-trait
+  $('.project-trait').show();
+
+  // Get chosen category.
+  var category = $(this).attr('data-ri-category');
+
+  // Filter irrelevant .project-trait
+  if (category !== 'all') {
+    $('.project-trait')
+      .filter(function() {
+        return !$(this).hasClass(category)
+      })
+      .hide();
+  };
+});

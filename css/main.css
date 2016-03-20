@@ -132,7 +132,7 @@ p.text-largest {
  * Arch
  **************************************************/
 #design-works {
-  height: 800px;
+  height: 900px;
   text-align: center;
   padding: 20px 0 40px 0;
   background-color: #231F20;
@@ -385,7 +385,7 @@ body.modal-open {
 }
 
 /**************************************************
- * Back Home Button
+ * Buttons
  **************************************************/
 .back-home-white,
 .back-home-black {
@@ -416,6 +416,32 @@ body.modal-open {
 .back-home-black:hover {
   border: 0.2px solid rgba(0, 0, 0, 0);
   color: #FFF;
+}
+
+#filters ul {
+  padding-left: 0;
+}
+
+#filters ul li {
+  display: inline-block;
+  margin: 20px 10px 20px 0;
+}
+
+.filter-button {
+  display: inline-block;
+  transition: color .5s;
+  padding: 5px 10px 5px 10px;
+  border: 0.2px solid rgba(255,255,255,0.5);
+}
+
+.filter-button.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.filter-button:hover {
+  background-color: #fff;
+  cursor: pointer;
 }
 
 /**************************************************
