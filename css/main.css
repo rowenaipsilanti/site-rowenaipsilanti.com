@@ -424,23 +424,22 @@ body.modal-open {
 
 #filters ul li {
   display: inline-block;
-  margin: 20px 10px 0 0;
+  margin: 0 10px 0 0;
 }
 
 .filter-button {
   display: inline-block;
-  transition: color .5s;
+  transition: all .5s ease;
   padding: 5px 10px 5px 10px;
-  border: 0.2px solid rgba(255,255,255,0.5);
 }
 
-.filter-button.active {
-  background-color: #fff;
-  color: #000;
+.filter-button.active,
+.filter-button:hover {
+  color: #fff;
+  font-size: 1.1em;
 }
 
 .filter-button:hover {
-  background-color: #fff;
   cursor: pointer;
 }
 
